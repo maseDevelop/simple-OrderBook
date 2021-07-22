@@ -9,7 +9,7 @@ Link to Modified version: https://github.com/maseDevelop/BokkyPooBahsRedBlackTre
 
 Orders are stored in a Solidity Mapping:
 
-Mapping -> sell token address -> buy token address -> sorted tree of Orders
+Mapping -> sell token address -> buy token address -> sorted tree of orders
 
 ## Functions
 
