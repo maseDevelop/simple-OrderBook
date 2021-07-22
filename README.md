@@ -1,2 +1,2 @@
-# simple-OrderBook
-Simple Order book library in Solidity using modified version of the BokkyPooBahsRedBlackTreeLibrary
+# 📲 Simple Order book library
+Order book library in Solidity using a modified version of the BokkyPooBahsRedBlackTreeLibrary
