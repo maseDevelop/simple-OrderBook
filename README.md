@@ -5,7 +5,7 @@ Link to original repository for BokkyPooBahsRedBlackTreeLibrary: https://github.
 
 Link to Modified version: https://github.com/maseDevelop/BokkyPooBahsRedBlackTreeLibrary-Modified
 
-**This has not been tested or audited and was made for Research Purposes - just to used to spark and idea **
+**This has not been tested or audited and was made for research purposes - just used to spark and idea **
 
 Orders are stored in a Solidity Mapping:
 
