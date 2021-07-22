@@ -1,7 +1,7 @@
 # 📲 Simple Order Book library
 Order book library in Solidity using a modified version of the BokkyPooBahsRedBlackTreeLibrary
 
-Link to original repository for BokkyPooBahsRedBlackTreeLibrary: https://github.com/bokkypoobah/BokkyPooBahsRedBlackTreeLibrary
+Link to original repository for BokkyPooBahsRedBlackTreeLibrary on which the lib is based on: https://github.com/bokkypoobah/BokkyPooBahsRedBlackTreeLibrary
 
 Link to Modified version: https://github.com/maseDevelop/BokkyPooBahsRedBlackTreeLibrary-Modified
 
