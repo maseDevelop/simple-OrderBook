@@ -5,7 +5,7 @@ Link to original repository for BokkyPooBahsRedBlackTreeLibrary: https://github.
 
 Link to Modified version: https://github.com/maseDevelop/BokkyPooBahsRedBlackTreeLibrary-Modified
 
-**This has not been tested or audited and was made for research purposes - just used to spark and idea **
+**This has not been tested or audited and was made for research purposes - just used to spark an idea **
 
 Orders are stored in a Solidity Mapping:
 
@@ -21,8 +21,12 @@ See [contracts/TestBokkyPooBahsRedBlackTree.sol](contracts/TestBokkyPooBahsRedBl
 ```javascript
 function root() internal view returns (uint _key);
 ```
+Insert the key `id` into the tree based on key `price`.
 
-Returns the root of the tree, or `EMPTY` is the tree is empty.
+Transaction | Condition
+:---------- |:--------
+_success_   | `id` has been successfully inserted into the tree
+_failure_   | `id` already exists in the tree
 
 <br />
 
@@ -32,12 +36,12 @@ Returns the root of the tree, or `EMPTY` is the tree is empty.
 function remove(OB storage self,uint _id, address _sell_token, address _buy_token) public;
 ```
 
-Returns the smallest key in the tree.
+removes value from tree
 
-Return Value  | Condition
-:------------ |:--------
-_{first key}_ | Tree has at least one key
-`EMPTY`       | Tree empty
+Transaction | Condition
+:---------- |:--------
+_success_   | `key` has been successfully removed from the tree
+_failure_   | `key` does not exist in the tree
 
 <br />
 
@@ -47,12 +51,12 @@ _{first key}_ | Tree has at least one key
 function getFirstOffer(OB storage self, address _sell_token, address _buy_token) public view returns(uint)
 ```
 
-Returns the largest key in the tree.
+Returns the smallest price value currently held in tree.
 
-Return Value | Condition
-:----------- |:--------
-_{last key}_ | Tree has at least one key
-`EMPTY`      | Tree empty
+Return Value  | Condition
+:------------ |:--------
+_{first key}_ | Tree has at least one key
+`EMPTY`       | Tree empty
 
 <br />
 
@@ -62,15 +66,12 @@ _{last key}_ | Tree has at least one key
 function getLastOffer(OB storage self, address _sell_token, address _buy_token) public view returns(uint);
 ```
 
-Returns the next key in the tree with a value larger than `x`.
+Returns the largest price value currently held in tree.
 
-Return Value | Condition
-:----------- |:--------
-_{next key}_ | There exists a key with a value larger than the `x` key
-`EMPTY`      | Tree empty
-`EMPTY`      | `x` is not an existing key in the tree
-`EMPTY`      | `x` is the only key in the tree
-`EMPTY`      | `x` is the last key in the tree
+Return Value  | Condition
+:------------ |:--------
+_{last key}_ | Tree has at least one key
+`EMPTY`       | Tree empty
 
 <br />
 
@@ -80,15 +81,9 @@ _{next key}_ | There exists a key with a value larger than the `x` key
 function getNode(OB storage self, uint _id, address _sell_token, address _buy_token) public view returns (uint price)
 ```
 
-Returns the previous key in the tree with a value smaller than `x`.
+Gets the price stored at a particular node
 
-Return Value | Condition
-:----------- |:--------
-_{prev key}_ | There exists a key with a value smaller than the `x` key
-`EMPTY`      | Tree empty
-`EMPTY`      | `x` is not an existing key in the tree
-`EMPTY`      | `x` is the only element in the tree
-`EMPTY`      | `x` is the last element in the tree
+Returns the node information if `key` exists in the tree. All `uint` values will be set to `EMPTY` if `key` does not exist in the tree.
 
 <br />
 
