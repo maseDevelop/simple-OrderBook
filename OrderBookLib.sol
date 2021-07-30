@@ -9,7 +9,7 @@ import "./BokkyPooBahsRedBlackTreeLibrary.sol";
  */
 library OrderBookLib {
 
-    //Importing Libraries
+    
     using RedBlackTreeLibrary for RedBlackTreeLibrary.Tree;
 
     struct OB {
