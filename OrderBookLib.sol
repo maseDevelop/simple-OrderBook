@@ -10,11 +10,11 @@ import "./BokkyPooBahsRedBlackTreeLibrary.sol";
 library OrderBookLib {
 
     //Importing Libraries
-    using BokkyPooBahsRedBlackTreeLibrary for BokkyPooBahsRedBlackTreeLibrary.Tree;
+    using RedBlackTreeLibrary for RedBlackTreeLibrary.Tree;
 
     struct OB {
         //Sell -> Buy -> Tree that holds the orders
-        mapping (address => mapping(address => BokkyPooBahsRedBlackTreeLibrary.Tree)) orderBook;
+        mapping (address => mapping(address => RedBlackTreeLibrary.Tree)) orderBook;
     }
 
     /**
